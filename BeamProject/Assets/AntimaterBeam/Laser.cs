@@ -19,7 +19,10 @@ public class Laser : MonoBehaviour
     {
         _startThickness = Thickness;
         _scaleFactor = transform.localScale.x;
-        CalcScaleFactor(transform.parent);
+        if (transform.parent != null)
+        {
+            CalcScaleFactor(transform.parent);
+        }
     }
 
     public void Activate()
